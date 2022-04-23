@@ -21,9 +21,9 @@
 ------ 
 ## Demo
 1. 使用Yolo工具LabelImg进行标注。
-2. 运行```xml2txt.py```，生成txt文件夹和photo文件夹，里面的档案对应（001.jpg对应001.txt）  
+2. 运行```xml2txt.py```，生成txt文件夹和photo文件夹，里面的档案对应（001.jpg对应001.txt），放到 data/Mydata
 3. 下载vgg模型
-4. 建立路径，data/dataset/mlt/image和data/dataset/mlt/label 
+4./mlt/image和data/dataset/mlt/label 
 5. split_label.py，里面更改路径，label会保存到data路径里
 6. 训练
 ------ 
