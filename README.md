@@ -2,8 +2,8 @@
   CTPN是在ECCV 2016提出的一种文字检测算法。CTPN结合CNN与LSTM深度网络，能有效的检测出复杂场景的横向分布的文字。
 ## Reference
 1. 源码：https://github.com/eragonruan/text-detection-ctpn
-2. csdn:https://blog.csdn.net/sxlsxl119/article/details/102767710
-3. 训练集制作:使用yolo的Imglabel，生成xml档案，再转换成txt。
+2. csdn: https://blog.csdn.net/sxlsxl119/article/details/102767710
+3. 训练集制作: 使用yolo的Imglabel，生成xml档案，再转换成txt。
 
 ------ 
 ## Environment
