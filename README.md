@@ -20,31 +20,22 @@
  	```
 ------ 
 ## Demo
-1. 建立训练集和验证集，例如1.jpg对应1.txt。.txt中是图片中的文本。
-2. 运行 lmdb.py，生成LMDB数据。
+1. 使用Yolo工具LabelImg进行标注。
+2. 
 3. 修改 train.py中的alphabet和参数。运行 train.py，开始训练。    
 ------ 
 ## Debug
-1. run lmdb.py     
-	Error: 'utf-8' codec can't decode byte 0xff in position 0: inva    
-	解决：在python2才能运行
+1. run utils/bbox/setup.py
+	```
+	chmod +x make.sh
+	./make.sh   
+	```
+	Error: ./make.sh失败    
+	解决：装完vs2015顺利(windows系统中)
 
-2. warp-ctc编译：  
- 	```
-	git clone https://github.com/SeanNaren/warp-ctc.git
-	cd warp-ctc    
-	mkdir build     
-	cd build    
-	cmake ..  
-	make
-	cd ../pytorch_binding
-	python setup.py install
-	 ```
-  	Error: nvcc fatal : Value 'c++14' is not defined for option 'std      
-   	解决： cuda版本兼容问题，安装cuda10,cudnn7,torch1.2,python3.6```conda install pytorch==1.2.0,torchvision==0.4.0 cudatoolkit=10.0 -c pytorch ```  
-	
-	Error: fatal error: cuda_runtime_api.h: No such file or directory  
-	解决：在warp-ctc/pytorch_binding/setup.py 修改  ```extra_compile_args = ['-std=c++14', '-fPIC']为extra_compile_args = ['-std=c++14', '-fPIC','-I/usr/local/cuda/include'] ```  
+2. demo.py： 
+	Error: utils报错
+	解决：库路径更改from utils.text_connector.detectors import TextDetector
 	
 3. train.py：  
 	Error: the nvidia driver on your system is too old (found version 9000)  
